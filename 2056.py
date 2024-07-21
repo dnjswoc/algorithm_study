@@ -18,12 +18,13 @@
 '''
 
 T = int(input())
+# 입력받을 날짜 수를 T로 설정
 
 for i in range(T):
     data = input()
-    data_y = int(data[:4])
-    data_m = int(data[4:6])
-    data_d = int(data[6:])
+    data_y = int(data[:4])      # 인덱스를 사용하여 날짜의 연도를 추출하여 저장
+    data_m = int(data[4:6])     # 날짜의 월 추출
+    data_d = int(data[6:])      # 날짜의 일 추출
     if data_m == 1 or data_m == 3 or data_m == 5 or data_m == 7 or data_m == 9 or data_m == 11:
         if data_d >= 1 and data_d <= 31:
             print(f'#{i+1} {data[:4]}/{data[4:6]}/{data[6:]}')
@@ -41,3 +42,4 @@ for i in range(T):
             print(f'#{i+1} -1')
     else:
         print(f'#{i+1} -1')
+# 숫자가 변환될 달력의 범위를 지정하고 그에 맞지 않으면 -1을 출력하도록 반복문과 조건문 설정

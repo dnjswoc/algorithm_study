@@ -14,12 +14,13 @@
 '''
 
 T = int(input())
+# 입력받을 테스트 케이스의 수를 T로 설정
 
 for i in range(T):
-    data = list(map(int, input().split()))
+    data = list(map(int, input().split()))  # 테스트 케이스 입력
     if data[0] > data[1]:
         print(f'#{i+1} >')
     elif data[0] == data[1]:
         print(f'#{i+1} =')
     else:
-        print(f'#{i+1} <')
+        print(f'#{i+1} <')  # 조건문을 이용하여 입력받은 두 수의 크기를 비교하여 f-string을 활용해 부등호 출력

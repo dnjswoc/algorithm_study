@@ -12,9 +12,9 @@
 '''
 
 Al = input()
-# A = 65, Z = 90
+# A = 65 ~ Z = 90
 Al_len = len(Al)
 Al_asc = []
 for i in range(Al_len):
-    Al_asc.append(ord(Al[i])-64)
+    Al_asc.append(ord(Al[i])-64)    # 빈 리스트를 하나 만들어 알파벳을 ASCII코드 번호로 변환하고 1이 나오도록 계산
 print(*Al_asc)

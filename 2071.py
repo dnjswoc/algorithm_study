@@ -15,12 +15,13 @@
 '''
 
 T = int(input())
+# 입력받을 테스트 케이스의 수를 T로 설정
 
 for i in range(T):
-    data = list(map(int, input().split()))
+    data = list(map(int, input().split()))  # 테스트 케이스 입력
     sum = 0
-    avg = 0
-    for k in range(len(data)):
+    avg = 0                         # 계산하기 전 합계와 평균의 초깃값 설정
+    for k in range(len(data)):      # 테스트 케이스의 길이만큼 반복
         sum += data[k]
-    avg = sum / len(data)
-    print(f'#{i+1} {round(avg)}')
+    avg = sum / len(data)           # 합계와 평균을 계산
+    print(f'#{i+1} {round(avg)}')   # f-string을 사용하여 평균 출력

@@ -14,8 +14,9 @@
 '''
 
 T = int(input())
+# 입력받을 테스트 케이스의 수를 T로 설정
 
 for i in range(T):
-    data=list(map(int, input().split()))
-    data.sort()
-    print(f'#{i+1} {data[9]}')
+    data=list(map(int, input().split()))    # 테스트 케이스를 입력
+    data.sort()                             # 입력받은 테스트 케이스를 정렬
+    print(f'#{i+1} {data[9]}')              # 정렬된 리스트에서 마지막 인덱스를 출력

@@ -15,22 +15,28 @@ THE_HEADLINE_IS_THE_TEXT_INDICATING_THE_NATURE_OF_THE_ARTICLE_BELOW_IT.
 '''
 
 headline = input()
+# input()함수를 이용해 텍스트를 입력받는다.
+
 headline_byte = bytes(headline, 'utf-8')
+# 문자열을 byte형태로 변환
 headline_byte_len = len(headline_byte)
-headline_before = []
-headline_ascii_before = []
-headline_after = []
+# byte형태의 텍스트이 길이를 저장
+
+headline_before = []        # 바꾸기 전의 텍스트를 받을 빈 리스트 생성
+headline_ascii_before = []  # 바꾸기 전 텍스트의 ASCII코드의 번호를 받을 빈 리스트 생성
+headline_after = []         # 바꾸고 난 후의 텍스를 받을 빈 리스트 생성
 if type(headline) == str:
     if headline_byte_len <= 80:
         for i in range(len(headline)):
-            headline_before.append(headline[i])
+            headline_before.append(headline[i])                                     # 빈 headline_before 리스트에 텍스트를 하나씩 넣기
         for i in range(len(headline)):
-            ascii_headline_before = ord(headline_before[i])
-            headline_ascii_before.append(ascii_headline_before)
-            if headline_ascii_before[i] >= 97 and headline_ascii_before[i] <= 122:
-                ascii_headline_after = headline_ascii_before[i] - 32
+            ascii_headline_before = ord(headline_before[i])                         # 바꾸기 전 텍스트를 ASCII코드 번호로 변환
+            headline_ascii_before.append(ascii_headline_before)                     # 변환한 ASCII코드 번호를 빈 리스트에 넣기
+            if headline_ascii_before[i] >= 97 and headline_ascii_before[i] <= 122:  # 알파벳 소문자에 해당하는 ASCII코드 번호를 범위로 지정하여
+                ascii_headline_after = headline_ascii_before[i] - 32                # 소문자를 대문자로 변환하고 빈 headline_after 리스트에 넣기
                 chr_headline_after = chr(ascii_headline_after)
                 headline_after.append(chr_headline_after)
             else:
                 headline_after.append(headline_before[i])
 print(''.join(headline_after))
+# 바꾸고 난 후의 텍스트를 ''없이 출력
