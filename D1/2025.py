@@ -7,7 +7,7 @@
 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
 '''
 
-N = int(input())
+N = int(input())        # 입력 받을 수
 sum=0
 for i in range(1, N+1):
     sum+=i

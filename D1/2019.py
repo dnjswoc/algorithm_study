@@ -4,11 +4,9 @@
 '''
 
 N = int(input())
-original_number = []
-multipled_number = []
-number = 1
-for i in range(1, N+2):
-    original_number.append(i)
+multipled_number = []       # 2가 곱해져 출력될 수
+number=1
+for i in range(1, N+2):     # 입력될 수가 N+1개라서
     multipled_number.append(f'{number} ')
     number*=2
 print(''.join(multipled_number))

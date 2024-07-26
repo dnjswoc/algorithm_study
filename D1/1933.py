@@ -16,6 +16,6 @@ N = int(input())
 
 aliquot = []
 for i in range(1, N+1):
-    if N % i == 0:
-        aliquot.append(f'{str(i)} ')
+    if N % i == 0:                      # 나누어 떨어지는 수를 찾아
+        aliquot.append(f'{str(i)} ')    # 리스트에 삽입
 print(''.join(aliquot))

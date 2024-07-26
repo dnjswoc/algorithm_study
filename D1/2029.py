@@ -13,8 +13,8 @@
 (t는 테스트 케이스의 번호를 의미하며 1부터 시작한다.)
 '''
 
-T = int(input())
+T = int(input())        # 테스트 케이스 입력 받기
 
-for i in range(T):
-    a, b = map(int, input().split())
-    print(f'#{i+1} {a//b} {a%b}')
+for i in range(T):      # T번 반복
+    a, b = map(int, input().split())    # 두 수를 입력 받고 공백을 기준으로 분리
+    print(f'#{i+1} {a//b} {a%b}')       # 목과 나머지 출력
